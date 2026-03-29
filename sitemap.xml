@@ -1,37 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/</loc>
+    <loc>http://hamatra.id.vn/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/product.html</loc>
+    <loc>http://hamatra.id.vn/product.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/news.html</loc>
+    <loc>http://hamatra.id.vn/news.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/newDetail.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/newDetail.html</loc>
+    <loc>http://hamatra.id.vn/newDetail-gshock.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/intro.html</loc>
+    <loc>http://hamatra.id.vn/newDetail-top5casio.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/newDetail-repair.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/ProductDetail.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/intro.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/contact.html</loc>
+    <loc>http://hamatra.id.vn/contact.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://inspiring-bonbon-f285c3.netlify.app/ProductDetail.html</loc>
-    <priority>0.80</priority>
+    <loc>http://hamatra.id.vn/cart.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/Login.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/registration.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>http://hamatra.id.vn/listlike.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
