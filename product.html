@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamatra | Danh mục đồng hồ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/hamatra.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html">Hamatra</a>
+      <nav class="site-nav">
+        <a href="./index.html">Trang chủ</a>
+        <a class="active" href="./product.html">Sản phẩm</a>
+        <a href="./news.html">Tin tức</a>
+        <a href="./intro.html">Thương hiệu</a>
+        <a href="./contact.html">Liên hệ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./listlike.html"><i class="fa-regular fa-heart"></i></a>
+        <a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-banner" style="background-image:url('https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/E/EF/EFR/efr-s108d-2bv/assets/EFR-S108D-2BV_lineup.jpg.transform/main-visual-pc/image.jpg');">
+          <div class="banner-content">
+            <p class="eyebrow">Danh mục Hamatra</p>
+            <h1>Danh sách đồng hồ nhiều sản phẩm, có lọc, có sắp xếp, có tìm kiếm.</h1>
+            <p>Bạn có thể dùng trang này như catalog chính cho web bán đồng hồ nam, nữ, thể thao và quà tặng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container catalog-grid">
+        <aside class="filter-card">
+          <p class="eyebrow">Bộ lọc</p>
+          <div class="filter-group">
+            <h4>Khoảng giá</h4>
+            <div class="option-list">
+              <label><input type="checkbox"> Dưới 1 triệu</label>
+              <label><input type="checkbox" checked> 1 triệu - 5 triệu</label>
+              <label><input type="checkbox"> 5 triệu - 10 triệu</label>
+              <label><input type="checkbox"> Trên 10 triệu</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h4>Thương hiệu</h4>
+            <div class="option-list">
+              <label><input type="checkbox" checked> Casio</label>
+              <label><input type="checkbox"> Rolex</label>
+              <label><input type="checkbox"> Citizen</label>
+              <label><input type="checkbox"> Seiko</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h4>Loại dây</h4>
+            <div class="option-list">
+              <label><input type="checkbox" checked> Kim loại</label>
+              <label><input type="checkbox"> Da</label>
+              <label><input type="checkbox"> Resin</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h4>Danh mục</h4>
+            <div class="option-list">
+              <label><input type="checkbox" checked> Đồng hồ nam</label>
+              <label><input type="checkbox" checked> Đồng hồ nữ</label>
+              <label><input type="checkbox" checked> Đồng hồ thể thao</label>
+            </div>
+          </div>
+        </aside>
+
+        <section>
+          <div class="toolbar">
+            <div class="toolbar-group">
+              <input type="text" placeholder="Tìm sản phẩm, mã, thương hiệu..." style="min-width:280px;">
+              <a class="button" href="./product.html">Tìm</a>
+            </div>
+            <div class="toolbar-group">
+              <select><option>Giá thấp → cao</option><option>Giá cao → thấp</option><option>Bán chạy</option><option>Mới nhất</option></select>
+            </div>
+          </div>
+
+          <div class="cards four">
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/M/MT/MTP/MTP-1374D-1AV/assets/MTP-1374D-1AV.png.transform/main-visual-pc/image.png" alt="MTP-1374"><div class="card-body"><span class="tag">Nam</span><h3>MTP-1374 Daily Steel</h3><p>2.890.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/E/EF/EFR/efr-s108d-2bv/assets/EFR-S108D-2BVU.png.transform/main-visual-sp/image.png" alt="EFR-S108D"><div class="card-body"><span class="tag">Nam</span><h3>EFR-S108D Slim</h3><p>5.690.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA2/GA-2100SKE-7A/assets/GA-2100SKE-7A_Seq01.png.transform/main-visual-pc/image.png" alt="GA-2100"><div class="card-body"><span class="tag">Thể thao</span><h3>GA-2100 Transparent</h3><p>4.990.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/B/BG/BGD/bgd-565sc-3/assets/BGD-565SC-3.png.transform/main-visual-pc/image.png" alt="BGD-565"><div class="card-body"><span class="tag">Nữ</span><h3>BGD-565 Sage Green</h3><p>3.590.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/M/MT/MTP/MTP-1374D-1AV/assets/MTP-1374D-1AV.png.transform/main-visual-sp/image.png" alt="Classic black"><div class="card-body"><span class="tag">Bán chạy</span><h3>Classic Black Office</h3><p>2.690.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/E/EF/EFR/efr-s108d-2bv/assets/EFR-S108D-2BV_side.jpg.transform/main-visual-sp/image.jpg" alt="Sapphire blue"><div class="card-body"><span class="tag">Cao cấp</span><h3>Sapphire Blue Steel</h3><p>5.990.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA2/GA-2100SKE-7A/assets/GA-2100SKE-7A_Seq02.jpg.transform/main-visual-sp/image.jpg" alt="Urban skeleton"><div class="card-body"><span class="tag">Street</span><h3>Urban Skeleton 2100</h3><p>5.190.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/B/BG/BGD/bgd-565sc-3/assets/BGD-565SC-3_model.jpg.transform/main-visual-sp/image.jpg" alt="Gift women"><div class="card-body"><span class="tag">Quà tặng</span><h3>Sage Gift Edition</h3><p>3.790.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/M/MT/MTP/MTP-1374D-1AV/assets/MTP-1374D-1AV.png.transform/main-visual-pc/image.png" alt="Silver office"><div class="card-body"><span class="tag">Văn phòng</span><h3>Silver Office One</h3><p>2.490.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/vn/vi/timepiece/product/watch/E/EF/EFR/efr-s108d-2bv/assets/EFR-S108D-2BVU.png.transform/main-visual-sp/image.png" alt="Octagon business"><div class="card-body"><span class="tag">Doanh nhân</span><h3>Octagon Business Blue</h3><p>6.190.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./cart.html">Giỏ hàng</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA2/GA-2100SKE-7A/assets/GA-2100SKE-7A_Seq01.png.transform/main-visual-pc/image.png" alt="Shock clear"><div class="card-body"><span class="tag">Outdoor</span><h3>Shock Clear Edition</h3><p>4.790.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+            <article class="product-card"><img src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/B/BG/BGD/bgd-565sc-3/assets/BGD-565SC-3.png.transform/main-visual-pc/image.png" alt="Pastel women"><div class="card-body"><span class="tag">Nữ trẻ</span><h3>Pastel Daily Light</h3><p>3.290.000 VND</p><div class="product-actions"><a class="button" href="./ProductDetail.html">Xem</a><a class="button ghost" href="./listlike.html">Yêu thích</a></div></div></article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

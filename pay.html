@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamatra | Thanh toán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/hamatra.css">
+</head>
+<body>
+  <main class="section">
+    <div class="container checkout-grid">
+      <section class="panel">
+        <p class="eyebrow">Checkout</p>
+        <h1 style="font-size:3rem;">Hoàn tất đơn hàng Hamatra</h1>
+        <form class="form-grid">
+          <div><label>Họ tên</label><input type="text" placeholder="Nguyễn Văn A"></div>
+          <div><label>Địa chỉ</label><input type="text" placeholder="123 Nguyễn Trãi, Quận 1"></div>
+          <div><label>Số điện thoại</label><input type="text" placeholder="0909 xxx xxx"></div>
+          <div><label>Mã giảm giá</label><input type="text" placeholder="HAMATRA30"></div>
+          <div><label>Phương thức thanh toán</label><select><option>COD (trả khi nhận)</option><option>Chuyển khoản</option><option>Ví điện tử</option><option>VNPay</option><option>Momo</option><option>PayPal</option></select></div>
+          <div><label>Ghi chú</label><textarea placeholder="Giao giờ hành chính hoặc gọi trước khi giao"></textarea></div>
+          <a class="button" href="./order_succes.html">Xác nhận đặt hàng</a>
+        </form>
+      </section>
+      <aside class="summary">
+        <p class="eyebrow">Vận chuyển & bảo mật</p>
+        <h3>Thông tin hỗ trợ</h3>
+        <ul class="check-list">
+          <li>Có thể tích hợp GHN, GHTK ở bước backend</li>
+          <li>Có khu theo dõi tracking đơn hàng</li>
+          <li>Khuyến nghị bật SSL / HTTPS khi lên host</li>
+          <li>Sẵn khung cho VNPay, Momo, PayPal</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
