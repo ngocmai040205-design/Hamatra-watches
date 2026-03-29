@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/product.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/news.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/newDetail.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/intro.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/contact.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://inspiring-bonbon-f285c3.netlify.app/ProductDetail.html</loc>
+    <priority>0.80</priority>
+  </url>
+</urlset>

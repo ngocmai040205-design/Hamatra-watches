@@ -1,0 +1,19 @@
+# Cho phép tất cả các công cụ tìm kiếm (Google, Bing, Yahoo...) truy cập
+User-agent: *
+
+# CHẶN các trang quản trị và riêng tư (Tránh lộ thông tin admin)
+Disallow: /admin.html
+Disallow: /accountManagement.html
+Disallow: /pay.html
+Disallow: /order_succes.html
+
+# CHO PHÉP quét các trang nội dung chính để đẩy SEO
+Allow: /index.html
+Allow: /product.html
+Allow: /news.html
+Allow: /newDetail.html
+Allow: /intro.html
+Allow: /assets/
+
+# CHỈ ĐƯỜNG cho Google thấy bản đồ trang web (Sitemap)
+Sitemap: https://inspiring-bonbon-f285c3.netlify.app/sitemap.xml
