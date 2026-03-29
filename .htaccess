@@ -1,0 +1,182 @@
+# Hamatra Watch Store - SEO Optimized .htaccess
+# Server configuration for best SEO & performance
+
+# ===== REDIRECT RULES =====
+# Redirect from old domain (Netlify) to new domain
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^inspiring-bonbon-f285c3\.netlify\.app$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hamatra\.id\.vn$ 
+RewriteRule ^(.*)$ http://hamatra.id.vn/$1 [L,R=301]
+
+# Remove www from URL (standardize)
+RewriteCond %{HTTP_HOST} ^www\.hamatra\.id\.vn$ [NC]
+RewriteRule ^(.*)$ http://hamatra.id.vn/$1 [L,R=301]
+
+# ===== HTTPS ENFORCEMENT (if needed) =====
+# Uncomment when HTTPS is available
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://hamatra.id.vn/$1 [L,R=301]
+
+# ===== TRAILING SLASH NORMALIZATION =====
+# Remove trailing slash from URLs (except directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} /$
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# ===== COMPRESSION (Enable Gzip) =====
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/x-httpd-php
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ===== CACHING (Cache-Control Headers) =====
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # HTML files - cache for 1 day
+  ExpiresByType text/html "access plus 1 day"
+  
+  # CSS - cache for 30 days
+  ExpiresByType text/css "access plus 30 days"
+  
+  # JavaScript - cache for 30 days
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType application/x-javascript "access plus 30 days"
+  
+  # Images - cache for 60 days
+  ExpiresByType image/jpeg "access plus 60 days"
+  ExpiresByType image/gif "access plus 60 days"
+  ExpiresByType image/png "access plus 60 days"
+  ExpiresByType image/webp "access plus 60 days"
+  ExpiresByType image/svg+xml "access plus 60 days"
+  
+  # Fonts - cache for 365 days
+  ExpiresByType font/ttf "access plus 365 days"
+  ExpiresByType font/otf "access plus 365 days"
+  ExpiresByType font/woff "access plus 365 days"
+  ExpiresByType font/woff2 "access plus 365 days"
+  ExpiresByType application/x-font-ttf "access plus 365 days"
+  ExpiresByType application/x-font-woff "access plus 365 days"
+  
+  # Default - 1 week
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# ===== BROWSER CACHING HEADERS =====
+<IfModule mod_headers.c>
+  # Cache HTML pages for 1 day
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=86400, public"
+  </FilesMatch>
+  
+  # Cache CSS for 30 days
+  <FilesMatch "\.(css)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  
+  # Cache JavaScript for 30 days
+  <FilesMatch "\.(js)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  
+  # Cache images for 60 days
+  <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico)$">
+    Header set Cache-Control "max-age=5184000, public"
+  </FilesMatch>
+  
+  # Cache fonts for 365 days
+  <FilesMatch "\.(ttf|otf|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # Add ETag for cache validation
+  Header set ETag "W/\"%(FileSize)d-%{TimeStamp}e\""
+</IfModule>
+
+# ===== SECURITY HEADERS =====
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header set X-Content-Type-Options "nosniff"
+  
+  # Enable XSS protection
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # Prevent clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  # Referrer Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ===== BLOCKING =====
+# Block access to admin files
+<FilesMatch "^(admin|pay|order_succes|accountManagement)\.html$">
+  Order allow,deny
+  Allow from all
+  # Note: robots.txt also blocks these for crawlers
+</FilesMatch>
+
+# Deny access to . and .. directories & files
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+  Satisfy All
+</FilesMatch>
+
+# Deny access to git directories
+RewriteRule ^\.git - [F,L]
+
+# Deny access to backup files
+<FilesMatch "\.(bak|config|sql|bz2|zip|tar|gz|log)$">
+  Order allow,deny
+  Deny from all
+  Satisfy All
+</FilesMatch>
+
+# ===== PERFORMANCE OPTIMIZATION =====
+# Disable ETags (use mtime and filesize only)
+FileETag MTime Size
+
+# Index directives (prevent directory listing)
+DirectoryIndex index.html index.htm
+Options -Indexes
+
+# ===== DEFAULT INPUT TYPE =====
+# Set default character encoding
+AddCharset UTF-8 .html .htm .css .js .json .xml
+
+# ===== FORCE URL REWRITING =====
+# Rewrite index.html to root (optional)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^/?$ index.html [L]
+
+# ===== ERROR DOCUMENTS =====
+# Custom error pages (if you create them)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# ===== HOTLINK PROTECTION =====
+# Prevent other sites from directly linking your images
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://hamatra\.id\.vn [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?hamatra\.id\.vn [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+
+# ===== SITEMAP & ROBOTS RULES =====
+# Ensure search engines can access sitemap and robots
+<FilesMatch "^(sitemap\.xml|robots\.txt)$">
+  Header set Cache-Control "max-age=86400, public"
+</FilesMatch>
+
+# ===== END OF HTACCESS =====
