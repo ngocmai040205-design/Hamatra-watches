@@ -1,19 +1,80 @@
-# Cho phép tất cả các công cụ tìm kiếm (Google, Bing, Yahoo...) truy cập
-User-agent: *
+# Hamatra Watch Store - SEO Optimized robots.txt
+# Cho phép tất cả các công cụ tìm kiếm truy cập website
 
-# CHẶN các trang quản trị và riêng tư (Tránh lộ thông tin admin)
+User-agent: *
+Allow: /
+
+# ===== CHẶN trang quản trị & riêng tư (Tránh lộ thông tin) =====
 Disallow: /admin.html
+Disallow: /admin/
 Disallow: /accountManagement.html
 Disallow: /pay.html
 Disallow: /order_succes.html
+Disallow: /*.php
+Disallow: /wp-admin/
+Disallow: /.git/
 
-# CHO PHÉP quét các trang nội dung chính để đẩy SEO
+# ===== CHO PHÉP trang nội dung chính =====
 Allow: /index.html
 Allow: /product.html
+Allow: /ProductDetail.html
 Allow: /news.html
 Allow: /newDetail.html
+Allow: /newDetail-gshock.html
+Allow: /newDetail-top5casio.html
+Allow: /newDetail-repair.html
 Allow: /intro.html
+Allow: /contact.html
+Allow: /cart.html
+Allow: /listlike.html
+Allow: /Login.html
+Allow: /registration.html
 Allow: /assets/
+Allow: /sitemap.xml
 
-# CHỈ ĐƯỜNG cho Google thấy bản đồ trang web (Sitemap)
-Sitemap: https://inspiring-bonbon-f285c3.netlify.app/sitemap.xml
+# ===== CRAWL DELAY (tránh làm server quá tải) =====
+Crawl-delay: 1
+
+# ===== CHỈ ĐƯỜNG Sitemap cho Google, Bing =====
+Sitemap: http://hamatra.id.vn/sitemap.xml
+
+# ===== QUY TẮC CỤ THỂ CHO CÁC SEARCH ENGINE =====
+
+# Google
+User-agent: Googlebot
+Disallow: /admin.html
+Disallow: /pay.html
+Allow: /
+
+# Bing/MSN
+User-agent: Bingbot
+Disallow: /admin.html
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Disallow: /admin.html
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Disallow: /admin.html
+Allow: /
+
+# ===== CHẶN các bot spam/xấu =====
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ===== CẤU HÌNH TỔNG QUÁT =====
+# Thời gian kiểm tra lại: 7 ngày (weekly)
+# Tần suất cập nhật: 1-2 ngày tùy page
+# Mục tiêu: Maximal crawl efficiency cho SEO
